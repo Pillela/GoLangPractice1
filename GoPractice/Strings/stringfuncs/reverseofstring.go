@@ -17,13 +17,13 @@ func Reverseofstring(a string) {
 //Anotherreverseofstring implementings swapping of rune literals.
 func Anotherreverseofstring(a string) {
 	runearray := []rune(a)
-	for i := 0; i < len(runearray); i++ { //Abishek
+	for i := 0; i < len(runearray)/2; i++ { //grammar
 		char1 := runearray[i]
-		for j := len(runearray) - 1; j >= 0; j-- {
+		for j := (len(runearray) - (i + 1)); j >= 0; j-- {
 			char2 := runearray[j]
 			runearray[i] = char2
 			runearray[j] = char1
-			continue
+			break
 		}
 	}
 	fmt.Println(string(runearray))

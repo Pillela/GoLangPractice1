@@ -81,6 +81,8 @@ func main() {
 	// 	fmt.Println(string(string1[i]))
 	// }
 
-	stringfuncs.Removedupechars("grammar is grammar")
+	//stringfuncs.Removedupechars("grammar is grammar")
+
+	stringfuncs.Anotherreverseofstring("abishek")
 
 }
