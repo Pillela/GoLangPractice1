@@ -1,9 +1,12 @@
 package main
 
 import (
-	// "strings"
 	"GoPractice/Strings/stringfuncs"
+	"fmt"
+	"strings"
 )
+
+// "strings"
 
 func main() {
 
@@ -83,6 +86,60 @@ func main() {
 
 	//stringfuncs.Removedupechars("grammar is grammar")
 
-	stringfuncs.Anotherreverseofstring("abishek")
+	// stringfuncs.Anotherreverseofstring("abishek")
+
+	// //using for as a while loop
+	// i := 0
+	// for i < 10 {
+	// 	fmt.Println(i)
+	// 	i++
+	// }
+
+	// x:= make([]float64, 5)
+
+	// arr := []float64{1, 2, 3, 4, 5}
+	// y := arr[0:4]
+	// y = append(y, 6, 7, 8)
+	// // fmt.Println(y)
+
+	// z := make([]float64, 10)
+	// copy(z, y)
+	// fmt.Println(z)
+
+	// //maps which are not initialised without "make" wont work.
+	// var x map[string]int
+	// x["abc"] = 1
+	// fmt.Println(x["abc"])
+
+	// y := make(map[string]int)
+	// y["abc"] = 1
+	// fmt.Println(y["abc"])
+
+	// x := 1
+	// y := 2
+	// swap(&x, &y)
+	// fmt.Println(x)
+	// fmt.Println(y)
+
+	var result []string
+	st := "applicationp    required knowledge"
+	words := strings.Split(st, " ")
+	for _, v := range words {
+
+		char := []rune(v)
+		r := string(stringfuncs.Sorted(char))
+		result = append(result, r)
+	}
+	fmt.Println(result)
+	fmt.Println(strings.Join(result, " "))
+
+}
+
+func swap(a *int, b *int) (int, int) {
+	var2 := *b
+	var1 := *a
+	*a = var2
+	*b = var1
+	return *a, *b
 
 }
