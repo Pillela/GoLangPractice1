@@ -3,7 +3,6 @@ package main
 import (
 	"GoPractice/Strings/stringfuncs"
 	"fmt"
-	"strings"
 )
 
 // "strings"
@@ -121,18 +120,20 @@ func main() {
 	// fmt.Println(x)
 	// fmt.Println(y)
 
-	var result []string
-	st := "applicationp    required knowledge"
-	words := strings.Split(st, " ")
-	for _, v := range words {
+	// var result []string
+	// st := "applicationp    required knowledge"
+	// words := strings.Split(st, " ")
+	// for _, v := range words {
 
-		char := []rune(v)
-		r := string(stringfuncs.Sorted(char))
-		result = append(result, r)
-	}
-	fmt.Println(result)
-	fmt.Println(strings.Join(result, " "))
+	// 	char := []rune(v)
+	// 	r := string(stringfuncs.Sorted(char))
+	// 	result = append(result, r)
+	// }
+	// fmt.Println(result)
+	// fmt.Println(strings.Join(result, " "))
 
+	string2 := stringfuncs.Printwordsinreverse("lets see if this works")
+	fmt.Println(string2)
 }
 
 func swap(a *int, b *int) (int, int) {
