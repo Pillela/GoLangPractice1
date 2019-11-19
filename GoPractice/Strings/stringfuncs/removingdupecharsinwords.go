@@ -1,5 +1,11 @@
 package stringfuncs
 
+import (
+	"GoPractice/Strings/stringfuncs"
+	"fmt"
+	"strings"
+)
+
 // //Removedupechars is called in main.go
 // func Removedupechars(s string) {
 // 	stringarray := strings.Fields(s)
@@ -17,11 +23,26 @@ package stringfuncs
 // 	}
 // 	fmt.Println(newstring)
 // }
+//Removedupechars export
+func Removedupechars() {
+	var result []string
+	st := "applicationp    required knowledge"
+	words := strings.Split(st, " ")
+	for _, v := range words {
 
+		char := []rune(v)
+		r := string(stringfuncs.Sorted(char))
+		result = append(result, r)
+	}
+	fmt.Println(result)
+	fmt.Println(strings.Join(result, " "))
+}
+
+//Sorted export
 func Sorted(char []rune) []rune { //application
 	k := make(map[rune]bool)
 	l := []rune{}
-	for _, e := range char {
+	for _, e := range char { //application
 		if _, v := k[e]; !v {
 			k[e] = true
 			l = append(l, e)

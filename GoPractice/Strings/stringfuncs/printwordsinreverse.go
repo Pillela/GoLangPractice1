@@ -12,5 +12,4 @@ func Printwordsinreverse(s string) string {
 		string2 = string2 + " " + wordarray[i]
 	}
 	return string2
-
 }
